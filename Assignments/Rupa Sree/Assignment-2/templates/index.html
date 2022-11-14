@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#34A5DA">
+
+    <link rel="icon" sizes="192x192" href="../static/images/icon.png">
+
+    <link rel="manifest" href="../static/manifest.json">
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Customer Care Registry</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <a class="navbar-brand text-white" href="/"><img src="../static/images/ttst.png" width="50">  Customer
+            Care</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{url_for('about')}}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{url_for('customerregister')}}">Signup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{url_for('customerlogin')}}">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="body">
+        <div class="row m-0 py-5 py-lg-0">
+            <div class="col-md-6 align-self-center pl-5" data-aos="fade-up-right">
+                <p class="m-0" style="font-family: 'Reggae One', cursive;font-size:large;">We Are Here For Care 24/7</p>
+                <h1> Customer Care</h1>
+                <p>
+                    More than anything, customers like to feel heard and seen. Having easy and efficient customer service channels inspires customer loyalty. It is important that a customer’s question gets answered, or the problem gets resolved as soon as possible.
+                
+                </p>
+                <a class="btn btn-primary mt-3" href="{{ url_for('customerregister')}}">Get Started</a>
+            </div>
+            <div class="col-md-6 align-self-center text-center" data-aos="fade-down-left">
+                <img class="parallax-img" src="../static/images/tre.jpg">
+            </div>
+        </div>
+    </section>
+
+
+   
+
+        <footer class="text-white py-2" data-aos="fade-up">
+        <div class="row m-0">
+            <div class="col-md-4 px-lg-5 py-4">
+                <h5 class="text-warning" style="font-family: 'Kanit', sans-serif;">ABOUT</h5>
+                <p>Small and medium enterprises in India have a very important place in the Indian economy. As we know that thisis the era of technology and every business whether small or large has to adopt this change to survive in thiscutthroat   business  competitio</p>
+            </div>
+            <div class="col-md-4 px-lg-5 py-4">
+                <h5 class="text-warning" style="font-family: 'Kanit', sans-serif;">CONTACT</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-map-marker"></i> Tamilnadu, India</li>
+                    <li><i class="fa fa-envelope-o"></i> SKRG@gmail.com</li>
+                    <li><i class="fa fa-phone"></i> +91 8056XXXXXX</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row m-0">
+            <div class="col-md-6 text-center text-md-left px-5">
+                <p>Copyright &copy; 2022 SKRG</p>
+            </div>
+            <div class="col-md-6 text-center text-md-right px-5 ">
+                <a href="#"><img class="mx-1" src="../static/images/social-media/facebook.png" width="25"/></a>
+                <a href="#"><img class="mx-1" src="../static/images/social-media/twitter.png" width="25"/></a>
+                <a href="#"><img class="mx-1" src="../static/images/social-media/instagram.png" width="25"/></a>
+                <a href="#"><img class="mx-1" src="../static/images/social-media/github.png" width="25"/></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../static/app.js"></script>
+    <script src="../static/js/aos.js"></script>
+    <script src="../static/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script>
+        AOS.init({
+            once: 'true'
+        })
+    </script>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
