@@ -1,0 +1,31 @@
+{
+    "name": "Customer Care Registry",
+    "short_name": "CCR PWA",
+    "theme_color": "#34A5DA",
+    "background_color": "#FFFFFF",
+    "icons": [
+        {
+          "src": "/static/images/icon64.png",
+          "type": "image/png",
+          "sizes": "64x64"
+        },
+        {
+          "src": "/static/images/icon96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "/static/images/icon192.png",
+          "type": "image/png",
+          "sizes": "192x192"
+        },
+        {
+          "src": "/static/images/icon512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
+}
