@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFRA User Login</title>
+    <!--<link rel="stylesheet" href="Style.css">-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body
+{
+    background-color: #f6f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Monserrat',sans-serif;
+    height: 100vh;
+    margin: 0 auto;
+    background-size: 20%;
+    
+}
+.container
+{
+
+    background-color: #fff;
+    border-radius: 10px;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 14px 28px rgba(0,0,0,.25),
+                0px 10px 10px rgba(0,0,0,.22)
+}
+.form-container
+{
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    transition: all 0.6 ease-in-out;
+}
+
+.login__icon {
+	position: absolute;
+	top: 20px;
+	color: #7875B5;
+    left: 10px;
+}
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 100%;
+	transition: .2s;
+    text-align: center;
+}
+.login__field {	
+	position: relative;	
+}
+.sign-up-container
+{
+    left: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+form
+{
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    padding: 0 50px;
+}
+h1{
+    font-weight: bold;
+    margin: 0;
+}
+a p{
+    color: #6d6d72;
+    position: relative;
+    left: -55px;
+    font-size: 10px;
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+}
+.social-container
+{
+    margin: 20px 0;
+
+}
+.social-container a{
+    border: 1px solid gray;
+    border-radius: 50%;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+    height: 50px;
+    width: 40px;
+}
+a fa-brands{
+
+    font-size: 20px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+.fa-facebook
+{
+    color: rgb(10, 97, 211);
+}
+.fab 
+{
+    color: rgb(219, 9, 47);
+}
+span{
+    margin-top:10px;
+    font-size: 14px;
+}
+input{
+    background-color: #eee;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: 8px 0;
+    padding: 12px 10px;
+    padding-left: 30px;
+    width: 100%;
+    text-align: left;
+}
+button
+{
+    border-radius: 20px;
+    border: 1px solid white;
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    color: black;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition:  0.8s ease-in;
+    margin: 10px;
+}
+.sign-in-container
+{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+.overley-container
+{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+    transition: 0.6s ease-in-out;
+}
+.overley
+{
+    background-color: #FF416C;
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #FFFFFF;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+}
+.overley-pannel
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 0px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+}
+.overley-left
+{
+    transform: translateX(-20%);
+}
+.overley-right
+{
+    right: 0;
+    transform: translateX(0);
+}
+button:active{
+    transform: scale(.90);
+}
+button.press
+{
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+p{
+    font-size: 14px;
+}
+
+.container.right-pannel-active .sign-in-container
+{
+    transform: translateX(100%);
+}
+.container.right-pannel-active .sign-up-container
+{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: slide 0.6s;
+}
+    </style>
+    <script src="https://kit.fontawesome.com/6980c42b4f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" id="Container">
+    <div class="form-container sign-in-container">
+        <form action="#" method="POST">
+            <h1>Sign In</h1>
+            <div class="login__field">
+                <i class="login__icon fa-solid fa-envelope"></i>
+                <input type="email" name="email" class="login__input" placeholder="Enter Mail">
+            </div>
+            <div class="login__field">
+                <i class="login__icon fas fa-lock"></i>
+                <input type="password" name="password" class="login__input" placeholder="Enter Password">
+            </div>
+            <a href="#"><p>Forget Password?</p></a>
+            <button>Sign in</button>
+            <span>Or Sign in With</span>
+             <div class="social-container">
+                <a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://accounts.google.com/v3/signin/identifier?dsh=S-553237183%3A1668163850094194&authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2Fu%2F0%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1%26pageId%3Dnone&ec=GAlAwAE&hl=en&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession" class="social"><i class="fab fa-google-plus-g"></i></a>
+             </div>
+             <p>Are you Admin?</p><a href="{{url_for('registerAd')}}"><span><u>Click Here</u></span></a>
+        </form>
+    </div>
+    <div class="overley-container">
+        <div class="overley">
+            <div class="overley-pannel overley-left">
+                <h1>Welcome to Smart Fashion Application</h1>
+                <button class="press" id="SignIn">Sign In</button>
+            </div>
+            <div class="overley-pannel overley-right">
+                <h1>Welcome to Smart Fashion Application</h1>
+                <a href="{{url_for('register')}}">
+                    <button class="press" id="SignUp">New User</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
