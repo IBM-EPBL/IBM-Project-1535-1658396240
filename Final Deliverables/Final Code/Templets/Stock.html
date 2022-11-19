@@ -1,0 +1,250 @@
+<html>
+<head>
+<title>Stock Maintenance</title>
+<style>
+    button
+    {font-size: 30px;
+     padding: 20px;
+     border-radius: 10px;
+     margin:10px    
+    }
+    #container
+    {
+        text-align: right;
+    }
+    table, th, td 
+    {
+            border: 1px solid black;
+         }
+         .center{
+          margin-left: auto;
+          margin-right: auto;
+         }
+</style>
+<div id="container"><a href="https://cloud.ibm.com/services/dashdb-for-transactions/crn%3Av1%3Abluemix%3Apublic%3Adashdb-for-transactions%3Aeu-gb%3Aa%2F8e8e137ee5844063a173d3d301ccd3c9%3Adae23299-08a8-418d-a9e9-92b2d637d951%3A%3A?paneId=manage"><button style='cursor: pointer;' id="btncloudlogin">cloud login</button></a>
+</div>
+<script type="text/javascript">
+function validation(){
+  if(document.f1.ItemType.Index == 0)
+    window.alert("plz Enter Item Type")
+    return false;
+  elseif(document.f1.ItemCode.value == "")
+    window.alert("plz Enter Item Code")
+    return false;
+  elseif(document.f1.ItemName.value == "")
+    window.alert("plz Enter ItemName")
+    return false;
+  elseif(document.f1.NetWeight.value == "")
+    window.alert("plz Enter Net Weight")
+    return false;
+  elseif(document.f1.Date.value == "")
+    window.alert("plz Enter The Date")
+    return false;
+  elseif(document.f1.Quantity.value == "")
+    window.alert("plz Enter Item Quantity")
+    return false;
+  elseif(document.f1.Price.value == "")
+    window.alert("plz Enter Item Price")
+    return false;
+  elseif(document.f1.TotalAmount.value == "")
+    window.alert("plz Enter Total Amount")
+    returnfalse;
+  else
+    return true;
+}
+</script>
+<style>
+h1.b {  
+  font-family: "Times New Roman", Times, serif;  
+  color:blue;  
+}
+</style>  
+  </head>
+<body align="Center" bgcolor=#BEBEBE>
+<form font-family: "Times New Roman", Times, serif;>
+<h1 class="b">Stock Maintence</h1>
+<fieldset>
+<legend>
+Stock Details
+</legend>
+<table align="Center">
+<tr>
+<th>Item Type</th>
+<td><select name="ItemType">
+<option>---Select Item Type---</option><option>Shirts<option><option>Pants</option><option>Accessories</option>Kurtas</option>Tops for women</option></td>
+<th>Item Code</th>
+<td><input type="number" name="ItemCode" min="0" max="1000"></td>
+</tr>
+<tr>
+<th>Item Name</th>
+<td><input type="text" name="ItemName" size="20"></td>
+
+<th>Net Weight</th>
+<td><input type="number" name="NetWeight" min="0" max="1000"></td>
+</tr>
+<tr>
+<th>Date</th>
+<td><input type="date" name="Date"></td>
+
+<th>Quantity</th>
+<td><input type="number" name="Quantity" min="0" max="10000"></td>
+</tr>
+<tr>
+<th>Price</th>
+<td><input type="number" name="Price" min="0" max="1000"></td>
+
+<th>Total Amount</th>
+<td><input type="number" name="TotalAmount" min="0" max="100000"</td>
+</tr>
+</table>
+<button style='cursor: pointer;'>Change Item Type</button>
+<button><<</button>
+<button><</button>
+<button>></button>
+<button>>></button>
+</fieldset>
+<fieldset>
+<Input type="submit" Value="Add New">
+<button style='cursor: pointer;'>Update ></button>
+<button style='cursor: pointer;'>Delete</button>
+<button style='cursor: pointer;'>Show All</button>
+<button style='cursor: pointer;'>Close</button>
+</fieldset>
+</form>
+<table class="center">
+         <tr>
+            <th>SNO</th>
+            <th>ITEM NAME</th>
+            <th>ITEM QUANTITY</th>
+            <th>PRICE</th>
+            
+         </tr>
+         <tr>
+            <td>1.</td>
+            <td>USPA Sneakers</td>
+            <td>1</td>
+            <td>799</td>
+         </tr>
+         <tr>
+          <td>2.</td>
+            <td>H&M Bodycon Dress</td>
+            <td>1</td>
+            <td>1499</td>
+         </tr>
+         <tr>
+         <td>3.</td>
+          <td>Blue Blazers</td>
+            <td>2</td>
+            <td>1798</td>
+         </tr>
+         <tr>
+          <td>4.</td>
+          <td>Jade Black Shades</td>
+            <td>1</td>
+            <td>799</td>
+          </tr>
+          <tr>
+          <td>5.</td>
+          <td>Funky SHirt</td>
+            <td>1</td>
+            <td>11799</td>
+          </tr>
+          <tr>
+          <td>6.</td>
+          <td>H&M Caps</td>
+            <td>1</td>
+            <td>499</td>
+          </tr>
+          <tr>
+          <td>7.</td>
+          <td>Tanned Coat</td>
+            <td>1</td>
+            <td>2079</td>
+          </tr>
+          <tr>
+          <td>8.</td>
+          <td>Printed Floral Gown</td>
+            <td>3</td>
+            <td>2799</td>
+            </tr>
+            <tr>
+          <td>9.</td>
+          <td>H&M Men Trousers</td>
+            <td>3</td>
+            <td>2999</td>
+          </tr>
+          <tr>
+          <td>10.</td>
+          <td>Biege Pumps</td>
+            <td>1</td>
+            <td>879</td>
+          </tr>
+          <tr>
+          <td>11.</td>
+          <td>Casual Tees</td>
+            <td>4</td>
+            <td>3999</td>
+          </tr>
+          <tr>
+          <td>12.</td>
+          <td>Silver Chains</td>
+            <td>1</td>
+            <td>795</td>
+          </tr>
+          <tr>
+          <td>13.</td>
+          <td>G-Shock Watch</td>
+            <td>1</td>
+            <td>2455</td>
+          </tr>
+          <tr>
+          <td>14.</td>
+          <td>Kurta Set</td>
+            <td>1</td>
+            <td>1799</td>
+          </tr>
+          <tr>
+          <td>15.</td>
+          <td>Lee-Cooper Blue Denim</td>
+            <td>1</td>
+            <td>2799</td>
+          </tr>
+          <tr>
+          <td>16.</td>
+          <td>Ethnic Chic Dress</td>
+            <td>2</td>
+            <td>2899</td>
+          </tr>
+          <tr>
+          <td>17.</td>
+          <td>Gold-Crystal Link Bracelet</td>
+            <td>1</td>
+            <td>375</td>
+          </tr>
+          <tr>
+          <td>18.</td>
+          <td>Crew-Neck T-Shirt</td>
+            <td>1</td>
+            <td>549</td>
+          </tr>
+          <tr>
+          <td>19.</td>
+          <td>Gold Charm Bracelets</td>
+            <td>2</td>
+            <td>1500</td>
+          </tr>
+          <tr>
+          <td>20.</td>
+          <td>Printed A-Line Kurta</td>
+            <td>2</td>
+            <td>1399</td>
+          </tr>
+          <tr>
+          <td>21.</td>
+          <td>Crocs</td>
+            <td>1</td>
+            <td>1799</td>
+          </tr>
+      </table>
+</body>
+</html>
